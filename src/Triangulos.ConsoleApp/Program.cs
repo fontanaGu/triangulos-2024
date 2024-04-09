@@ -11,50 +11,35 @@
     {
         static void Main(string[] args)
         {
+          Triangulo triangulo1 = new Triangulo(3,3,3);
+            triangulo1.X = 3;
+            triangulo1.Y = 3;
+            triangulo1.Z = 3;
 
-            // Mensagem de boas vindas
-            Console.WriteLine("Bem-vindo ao verificador de triângulos!");
-            Console.WriteLine("Aperte qualquer tecla para continuar...");
+            Console.WriteLine(triangulo1.VerificarTriangulo());
+
+            Triangulo triangulo2 = new Triangulo(3,3,4);
+            triangulo2.X = 3;
+            triangulo2.Y = 3;
+            triangulo2.Z = 4;
+
+            Console.WriteLine(triangulo2.VerificarTriangulo());
+
+            Triangulo triangulo3 = new Triangulo(3,4,5);
+            triangulo3.X = 3;
+            triangulo3.Y = 4;
+            triangulo3.Z = 5;
+
+            Console.WriteLine(triangulo3.VerificarTriangulo());
+
+            Triangulo triangulo4 = new Triangulo(3,4,8);
+            triangulo4.X = 3;
+            triangulo4.Y = 4;
+            triangulo4.Z = 8;
+
+            Console.WriteLine(triangulo4.VerificarTriangulo());
+
             Console.ReadKey();
-
-            // Solicitação de dados
-
-            Console.WriteLine("Digite o valor de X: ");
-            int x = int.Parse(Console.ReadLine());
-            
-            Console.WriteLine("Digite o valor de Y: ");
-            int y = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("Digite o valor de Z: ");
-            int z = int.Parse(Console.ReadLine());
-
-
-            // Verificação de triângulo
-            Console.WriteLine();
-            if (x < y + z && y < x + z && z < x + y)
-            {
-                if (x == y && y == z)
-                {
-                    Console.WriteLine("Triângulo Equilátero");
-                }
-                else if (x == y || x == z || y == z)
-                {
-                    Console.WriteLine("Triângulo Isósceles");
-                }
-                else
-                {
-                    Console.WriteLine("Triângulo Escaleno");
-                }
-            }
-            else
-            {
-                Console.WriteLine("Não é um triângulo");
-            }
-            
-            Console.ReadKey();
-
-
-
 
         }
     }
